@@ -1,3 +1,9 @@
-.component {
-  background-color: purple;
+.container {
+  .menu {
+    margin: 10px;
+    background-color: #d90e19;
+  }
+  .content {
+    margin: 10px;
+  }
 }

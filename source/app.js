@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Component from './component.jsx';
+import MainContainer from './main-container.jsx'
 
 render(
-  <Component />,
+  <MainContainer />,
   document.getElementById('app')
 );

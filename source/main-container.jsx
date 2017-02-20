@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Search from './components/search.jsx';
 import Favorites from './components/favorites.jsx';
+import Results from './components/results.jsx';
 import NetflixLogo from '../assets/netflix-logo.png';
 
 import './main.scss';
@@ -18,6 +19,7 @@ class MainComponent extends React.Component {
         <Row className="content">
           <Col xs={12} md={6}>
             <Search />
+            <Results />
           </Col>
           <Col xs={12} md={6}>
             <Favorites />

@@ -1,13 +1,16 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Search from './components/search.jsx';
-import Favorites from './components/favorites.jsx';
-import Results from './components/results.jsx';
-import NetflixLogo from '../assets/netflix-logo.png';
+import Search from './common/search.jsx';
+import Favorites from './common/favorites.jsx';
+import ResultList from './common/resultList.jsx';
+import NetflixLogo from '../../assets/netflix-logo.png';
 
-import './main.scss';
+import './app.scss';
 
-class MainComponent extends React.Component {
+class App extends React.Component {
+  onResultClick() {
+    console.log("dispatch action");
+  }
   render() {
     return (
       <div className="container">
@@ -19,7 +22,7 @@ class MainComponent extends React.Component {
         <Row className="content">
           <Col xs={12} md={6}>
             <Search />
-            <Results />
+            <ResultList onResultClick={this.onResultClick} />
           </Col>
           <Col xs={12} md={6}>
             <Favorites />
@@ -30,4 +33,4 @@ class MainComponent extends React.Component {
   }
 }
 
-export default MainComponent;
+export default App;

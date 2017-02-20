@@ -4,5 +4,11 @@
   "extends": "airbnb",
   "plugins":[
     "react"
-  ]
+  ],
+  "rules": {
+    // Rules overridden from airbnb
+    "comma-dangle": [0, "never"],
+    "import/extensions": 0,
+    "jsx-a11y/no-static-element-interactions": 0
+  },
 }

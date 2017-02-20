@@ -12,9 +12,7 @@ class MainComponent extends React.Component {
       <div className="container">
         <Row className="menu">
           <Col xs={12} className="text-center">
-            <Row>
-              <Col xs={12}><img src={NetflixLogo} /></Col>
-            </Row>
+            <img src={NetflixLogo} alt="netflix-logo" />
           </Col>
         </Row>
         <Row className="content">

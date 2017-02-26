@@ -1,16 +1,13 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Search from './common/search.jsx';
-import Favorites from './common/favorites.jsx';
-import ResultList from './common/resultList.jsx';
+import FavoritesContainer from '../container/favoritesContainer.js';
+import ResultsContainer from '../container/resultsContainer.js';
 import NetflixLogo from '../../assets/netflix-logo.png';
 
 import './app.scss';
 
 class App extends React.Component {
-  onResultClick() {
-    console.log("dispatch action");
-  }
   render() {
     return (
       <div className="container">
@@ -22,10 +19,10 @@ class App extends React.Component {
         <Row className="content">
           <Col xs={12} md={6}>
             <Search />
-            <ResultList onResultClick={this.onResultClick} />
+            <ResultsContainer />
           </Col>
           <Col xs={12} md={6}>
-            <Favorites />
+            <FavoritesContainer />
           </Col>
         </Row>
       </div>

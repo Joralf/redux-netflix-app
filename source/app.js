@@ -9,7 +9,6 @@ import reduxApp from './reducers/index';
 
 let store = createStore(reduxApp);
 
-
 render(
   <Provider store={store}>
     <App />

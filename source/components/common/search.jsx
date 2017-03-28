@@ -1,5 +1,7 @@
 import React from 'react';
 import { FormGroup, FormControl } from 'react-bootstrap';
+import { fetchMovies } from '../../actions/search'
+import { connect } from 'react-redux'
 
 class Search extends React.Component {
   constructor(props) {
@@ -12,7 +14,9 @@ class Search extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({ value: e.target.value });
+    dispatch(fetchMovies(e.target.value))
+
+    // this.setState({ value: e.target.value });
   }
   render() {
     return (
@@ -33,4 +37,6 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+
+
+export default connect()(Search);

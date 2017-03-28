@@ -1,17 +1,12 @@
+import 'babel-polyfill';
+
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import App from './components/app.jsx';
 import Bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.css';
 
-import reduxApp from './reducers/index';
-
-let store = createStore(reduxApp);
+import Root from './container/Root';
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Root />,
   document.getElementById('app')
-);
+)

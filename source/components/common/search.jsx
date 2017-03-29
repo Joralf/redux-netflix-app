@@ -1,7 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { FormGroup, FormControl } from 'react-bootstrap';
-import { fetchMovies } from '../../actions/search';
 
 class Search extends React.Component {
   constructor(props) {
@@ -10,13 +8,18 @@ class Search extends React.Component {
       value: '',
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.onHandleChange = this.onHandleChange.bind(this);
   }
 
-  handleChange(e) {
-    // dispatch(fetchMovies(e.target.value));
-    this.setState({ value: e.target.value });
+  onHandleChange(e) {
+    const queryString = e.target.value;
+    console.log("calling click handler with", queryString);
+    this.setState({ value: queryString });
+    if (queryString.length > 5) {
+      this.props.onHandleChange(queryString);
+    }
   }
+
   render() {
     return (
       <form>
@@ -27,7 +30,7 @@ class Search extends React.Component {
             type="text"
             value={this.state.value}
             placeholder="Search for movie, director, actor etc."
-            onChange={this.handleChange}
+            onChange={this.onHandleChange}
           />
           <FormControl.Feedback />
         </FormGroup>
@@ -36,4 +39,8 @@ class Search extends React.Component {
   }
 }
 
-export default connect()(Search);
+Search.propTypes = {
+  onHandleChange: React.PropTypes.func.isRequired,
+};
+
+export default Search;

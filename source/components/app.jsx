@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Search from './common/search.jsx';
+import SearchContainer from '../container/searchContainer.js';
 import FavoritesContainer from '../container/favoritesContainer.js';
 import ResultsContainer from '../container/resultsContainer.js';
 import NetflixLogo from '../../assets/netflix-logo.png';
@@ -18,7 +18,7 @@ class App extends React.Component {
         </Row>
         <Row className="content">
           <Col xs={12} md={6}>
-            <Search />
+            <SearchContainer />
             <ResultsContainer />
           </Col>
           <Col xs={12} md={6}>

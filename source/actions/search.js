@@ -5,7 +5,7 @@ export const RECEIVE_MOVIES = 'RECEIVE_MOVIES';
 
 export function requestMovies(queryString) {
   return {
-    type: 'SEARCH_MOVIES',
+    type: 'REQUEST_MOVIES',
     queryString,
   };
 }

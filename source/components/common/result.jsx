@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 const Result = ({ onClick, value, children }) => (
   <li onClick={() => onClick(value)}>

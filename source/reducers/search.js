@@ -18,9 +18,9 @@ const search = (state = initialState, action) => {
         results: action.results,
         lastUpdated: action.receivedAt
       });
-      default:
-        return state;
-    }
-  };
+    default:
+      return state;
+  }
+};
 
 export default search;

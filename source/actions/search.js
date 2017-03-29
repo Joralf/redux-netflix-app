@@ -15,14 +15,13 @@ function receiveMovies(queryString, results) {
   return {
     type: 'RECEIVE_MOVIES',
     queryString,
-    results: results,
+    results,
     receivedAt: Date.now()
-  }
+  };
 }
 
 export function fetchMovies(queryString) {
-  return function (dispatch) {
-
+  return (dispatch) => {
     dispatch(requestMovies(queryString));
 
     return fetch(`http://netflixroulette.net/api/api.php?director=${queryString}`)
@@ -30,6 +29,5 @@ export function fetchMovies(queryString) {
       .then(json =>
         dispatch(receiveMovies(queryString, json))
       );
-
-  }
+  };
 }

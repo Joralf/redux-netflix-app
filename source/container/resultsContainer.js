@@ -4,7 +4,7 @@ import Results from '../components/common/results.jsx';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    results: state.results,
+    results: state.search.results,
   };
 };
 

@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 const Favorite = ({ children, onClick }) => (
   <li onClick={onClick} >

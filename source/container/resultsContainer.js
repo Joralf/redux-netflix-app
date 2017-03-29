@@ -4,18 +4,7 @@ import Results from '../components/common/results.jsx';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    results: [
-      {
-        show_title: 'Kill Bill',
-        director: 'Quentin Tarantino',
-        id: 1,
-      },
-      {
-        show_title: 'Men In Black',
-        director: 'Some guy',
-        id: 2,
-      },
-    ],
+    results: state.search.results,
   };
 };
 

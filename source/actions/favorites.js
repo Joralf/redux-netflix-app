@@ -8,9 +8,9 @@ export function addFavorite(favorite) {
   };
 }
 
-export function removeFavorite(id) {
+export function removeFavorite(unit) {
   return {
     type: 'REMOVE_FAVORITE',
-    id,
+    unit,
   };
 }

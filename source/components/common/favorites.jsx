@@ -4,7 +4,7 @@ import Favorite from './favorite.jsx';
 const Favorites = ({ favorites, onClick }) => (
   <ul>
     {favorites.map(favorite =>
-      <Favorite key={favorite.id} onClick={() => onClick(favorite.id)}>
+      <Favorite key={favorite.unit} onClick={() => onClick(favorite.unit)}>
         {favorite.show_title} by {favorite.director}
       </Favorite>
     )}
@@ -13,7 +13,7 @@ const Favorites = ({ favorites, onClick }) => (
 
 Favorites.propTypes = {
   favorites: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    unit: PropTypes.number.isRequired,
     director: PropTypes.string.isRequired,
     show_title: PropTypes.string.isRequired,
   })),

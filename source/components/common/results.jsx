@@ -4,7 +4,7 @@ import Result from './result.jsx';
 const Results = ({ results, onClick }) => (
   <ul>
     {results.map(result =>
-      <Result value={result} onClick={(obj) => { onClick(obj); }} key={result.id}>
+      <Result value={result} onClick={(obj) => { onClick(obj); }} key={result.unit}>
         {result.show_title} by {result.director}
       </Result>
     )}
@@ -13,7 +13,7 @@ const Results = ({ results, onClick }) => (
 
 Results.propTypes = {
   results: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    unit: PropTypes.number.isRequired,
     director: PropTypes.string.isRequired,
     show_title: PropTypes.string.isRequired,
   }).isRequired).isRequired,

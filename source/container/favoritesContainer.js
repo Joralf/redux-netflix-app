@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
-import Favorites from '../components/common/favorites.jsx';
+import MovieList from '../components/common/movieList.jsx';
 import { removeFavorite } from '../actions/favorites';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    favorites: state.favorites.favorites,
+    movies: state.favorites.favorites,
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onClick: (obj) => {
-      dispatch(removeFavorite(obj));
+    onClick: (movie) => {
+      dispatch(removeFavorite(movie.unit));
     }
   };
 };
@@ -19,6 +19,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 const favoritesContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Favorites);
+)(MovieList);
 
 export default favoritesContainer;

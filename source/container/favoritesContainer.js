@@ -5,6 +5,7 @@ import { removeFavorite } from '../actions/favorites';
 const mapStateToProps = (state, ownProps) => {
   return {
     movies: state.favorites.favorites,
+    buttonText: "Remove from Favorites"
   };
 };
 
